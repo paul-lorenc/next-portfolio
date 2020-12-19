@@ -1,3 +1,3 @@
-export const CodeCard: React.FC<any> = () => {
+export const PostCard: React.FC<any> = () => {
   return <div>hello</div>;
 };
