@@ -1,5 +1,5 @@
-import { PostCard } from "@/components/PostCard";
+import { ProjectCard } from "@/components/ProjectCard";
 
-const MDXComponents = { PostCard };
+const MDXComponents = { ProjectCard };
 
 export default MDXComponents;

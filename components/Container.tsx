@@ -3,26 +3,32 @@ import Image from "next/image";
 
 import { Footer } from "@/components/Footer";
 import { Monogram } from "@/components/Monogram";
+import { CodeIcon } from "@/components/CodeIcon";
+import { ImageIcon } from "./ImageIcon";
 
 export const Container: React.FC = ({ children }) => {
   return (
-    <div className="bg-black font-serif">
-      <nav className="sticky-nav flex justify-between max-w-5xl w-full items-center mb-8 p-8 my-0 md:my-8 mx-auto bg-black bg-opacity-60">
+    <div className="bg-black font-serif h-screen">
+      <nav className="sticky-nav flex justify-between max-w-5xl w-full items-center mb-8 p-8 md:my-8 mx-auto bg-black bg-opacity-60">
         <NextLink href="/">
-          <div>
+          <a>
             <Monogram />
-          </div>
+          </a>
         </NextLink>
-        <div>
+        <div className="flex">
           <NextLink href="/code">
-            <a className="p-1 sm:p-4 text-gray-100">Code</a>
+            <a>
+              <CodeIcon />
+            </a>
           </NextLink>
           <NextLink href="/images">
-            <a className="p-1 sm:p-4 text-gray-100">Images</a>
+            <a>
+              <ImageIcon />
+            </a>
           </NextLink>
         </div>
       </nav>
-      <main className="flex flex-col items-center bg-black px-8">
+      <main className="flex flex-col items-center bg-black">
         {children}
         <Footer />
       </main>

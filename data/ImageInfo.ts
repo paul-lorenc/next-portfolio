@@ -1,6 +1,6 @@
 interface ImageMatter {
   title: string;
-  data: string;
+  data: Date;
   src: string;
   slateID: string;
   slug: string;
@@ -9,14 +9,14 @@ interface ImageMatter {
 const ImageInfo: ImageMatter[] = [
   {
     title: "personal-monogram",
-    data: "December 18, 2020",
+    data: new Date("December 18, 2020"),
     src: "",
     slateID: "",
     slug: "personal-monogram",
   },
   {
     title: "personal-monogram",
-    data: "December 19, 2020",
+    data: new Date("December 19, 2020"),
     src: "",
     slateID: "",
     slug: "personal-monogram",

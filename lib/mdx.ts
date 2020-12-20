@@ -1,1 +1,41 @@
-export async function getPostBySlug(slug: string) {}
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+const projectDirectory = path.join(process.cwd(), "data/projects");
+
+export const getSortedPosts = () => {
+  //Reads all the files in the post directory
+  const fileNames = fs.readdirSync(projectDirectory);
+
+  const allPostsData = fileNames.map((filename) => {
+    const slug = filename.replace(".mdx", "");
+
+    const fullPath = path.join(projectDirectory, filename);
+    //Extracts contents of the MDX file
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data } = matter(fileContents);
+
+    const options = { month: "long", day: "numeric", year: "numeric" };
+    const formattedDate = new Date(data.date).toLocaleDateString(
+      "en-IN",
+      options
+    );
+
+    const frontmatter = {
+      ...data,
+      date: formattedDate,
+    };
+    return {
+      slug,
+      ...frontmatter,
+    };
+  });
+  return allPostsData.sort((a, b) => {
+    if (new Date(a.date) < new Date(b.date)) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
+};
