@@ -2,9 +2,9 @@ import NextLink from "next/link";
 import Image from "next/image";
 
 import { Footer } from "@/components/Footer";
-import { Monogram } from "@/components/Monogram";
-import { CodeIcon } from "@/components/CodeIcon";
-import { ImageIcon } from "./ImageIcon";
+import { Monogram } from "@/components/svgs/Monogram";
+import { CodeIcon } from "@/components/svgs/CodeIcon";
+import { ImageIcon } from "./svgs/ImageIcon";
 
 export const Container: React.FC = ({ children }) => {
   return (
