@@ -1,3 +1,4 @@
+import { slateAPIKey } from "private-api-keys";
 import { title } from "process";
 
 export interface SlateImage {
@@ -37,7 +38,7 @@ export async function getAllSlates() {
   const res = await fetch("https://slate.host/api/v1/get", {
     headers: {
       "Content-Type": "application/json",
-      Authorization: "SLAfdf6543f-106b-4f12-bcdb-1283853dedaeTE",
+      Authorization: slateAPIKey,
     },
   });
   const json = await res.json();
