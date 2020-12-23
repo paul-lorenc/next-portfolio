@@ -2,13 +2,21 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+export interface Project {
+  slug: string;
+  title: string;
+  date: string;
+  author: string;
+  excerpt: string;
+}
+
 const projectDirectory = path.join(process.cwd(), "data/projects");
 
 export const getSortedPosts = () => {
   //Reads all the files in the post directory
   const fileNames = fs.readdirSync(projectDirectory);
 
-  const allPostsData = fileNames.map((filename) => {
+  const allProjectData = fileNames.map((filename) => {
     const slug = filename.replace(".mdx", "");
 
     const fullPath = path.join(projectDirectory, filename);
@@ -31,7 +39,7 @@ export const getSortedPosts = () => {
       ...frontmatter,
     };
   });
-  return allPostsData.sort((a, b) => {
+  return allProjectData.sort((a, b) => {
     if (new Date(a.date) < new Date(b.date)) {
       return 1;
     } else {
