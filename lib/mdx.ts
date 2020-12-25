@@ -8,6 +8,7 @@ export interface Project {
   date: string;
   author: string;
   excerpt: string;
+  src: string;
 }
 
 const projectDirectory = path.join(process.cwd(), "data/projects");

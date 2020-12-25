@@ -34,8 +34,10 @@ export const Container: React.FC = ({ children }) => {
           </NextLink>
         </div>
       </nav>
-      <div className="flex flex-col items-center bg-black">{children}</div>
-      <Footer />
+      <div className="flex flex-col items-center bg-black">
+        <div className="flex flex-col items-center bg-black">{children}</div>
+        <Footer />
+      </div>
     </div>
   );
 };

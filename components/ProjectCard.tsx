@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Project } from "@/lib/mdx";
-import { ImageIcon } from "./svgs/ImageIcon";
+import Image from "next/image";
 interface Props {
   project: Project;
 }
@@ -13,7 +13,7 @@ export const ProjectCard: React.FC<any> = (props: Props) => {
         className="flex items-center border border-gray-800 hover:border-gray-700 p-5"
       >
         <div className="pr-4">
-          <ImageIcon />
+          <Image src={p.src} height={32} width={32} layout="fixed" />
         </div>
         <div>
           <h4 className="text-lg font-bold tracking-tight text-gray-100">

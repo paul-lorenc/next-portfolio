@@ -72,7 +72,6 @@ export async function getHeaderSlateImages() {
       ret.push(image);
     }
   }
-  console.log(ret);
   return ret;
 }
 

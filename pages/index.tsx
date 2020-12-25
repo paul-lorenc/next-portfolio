@@ -34,7 +34,6 @@ export default function Home(props: Props) {
 export async function getStaticProps() {
   let posts: any = await getSortedPosts();
   const slates: SlateImage[] = await getHeaderSlateImages();
-  console.log(slates);
   let feedarr: AbstractPost[] = [];
   let postidx = 0;
   let slateidx = 0;
@@ -74,6 +73,5 @@ export async function getStaticProps() {
       }
     }
   }
-  console.log(feedarr);
   return { props: { feedarr } };
 }
