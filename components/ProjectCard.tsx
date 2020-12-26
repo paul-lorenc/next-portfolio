@@ -7,13 +7,20 @@ interface Props {
 export const ProjectCard: React.FC<any> = (props: Props) => {
   let p: Project = props.project;
   return (
-    <Link href={`/code/${p.slug}`}>
+    <Link key={p.slug} href={`/code/${p.slug}`}>
       <a
         key={p.slug}
         className="flex items-center border border-gray-800 hover:border-gray-700 p-5"
       >
         <div className="pr-4">
-          <Image src={p.src} height={32} width={32} layout="fixed" />
+          <Image
+            src={p.src}
+            height={32}
+            width={32}
+            quality={40}
+            priority
+            layout="fixed"
+          />
         </div>
         <div>
           <h4 className="text-lg font-bold tracking-tight text-gray-100">
