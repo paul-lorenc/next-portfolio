@@ -13,10 +13,10 @@ const SEO = {
     description,
     images: [
       {
-        url: "https://leerob.io/static/images/banner.jpg",
+        url: "https://paul-lorenc/banners/home-banner.png",
         alt: title,
         width: 1280,
-        height: 720,
+        height: 640,
       },
     ],
   },

@@ -1,4 +1,4 @@
-import { slateAPIKey } from "private-api-keys";
+let slateAPIkey: any = process.env.SLATE_API_KEY;
 
 export interface SlateImage {
   updated_at: string;
@@ -46,7 +46,7 @@ export async function getAllSlates() {
   const res = await fetch("https://slate.host/api/v1/get", {
     headers: {
       "Content-Type": "application/json",
-      Authorization: slateAPIKey,
+      Authorization: slateAPIkey,
     },
   });
   const json = await res.json();
@@ -57,7 +57,7 @@ export async function getHeaderSlateImages() {
   const res = await fetch("https://slate.host/api/v1/get", {
     headers: {
       "Content-Type": "application/json",
-      Authorization: slateAPIKey,
+      Authorization: slateAPIkey,
     },
   });
   const json = await res.json();

@@ -2,7 +2,9 @@ import { getAllProjectSlugs, getProjectBySlug } from "@/lib/mdx";
 import Head from "next/head";
 import matter from "gray-matter";
 import { Container } from "@/components/Container";
+// @ts-ignore
 import renderToString from "next-mdx-remote/render-to-string";
+// @ts-ignore
 import hydrate from "next-mdx-remote/hydrate";
 import MDXComponents from "@/data/MDXComponents";
 
@@ -14,7 +16,7 @@ export default function Code({ source, frontMatter }: any) {
         <title>{frontMatter.title}</title>
       </Head>
       <Container>
-        <div className="text-gray-100 max-w-xs sm:max-w-lg md:max-w-2xl">
+        <div className="text-gray-100 max-w-md md:max-w-xl md:max-w-2xl">
           <div className="text-center p-4">
             <h1 className="text-3xl font-semibold">{frontMatter.title}</h1>
             <span className="font-thin">{frontMatter.date}</span>

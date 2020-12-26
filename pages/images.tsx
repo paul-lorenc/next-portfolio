@@ -13,7 +13,7 @@ export default function Images(props: Props) {
   return (
     <>
       <Container>
-        <div className="max-w-2xl space-y-4 px-8">
+        <div className="max-w-2xl space-y-4">
           {slates.map((s: SlateImage) => {
             return <ImageCard slateImage={s} />;
           })}

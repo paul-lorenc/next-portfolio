@@ -11,7 +11,7 @@ export interface Project {
   src: string;
 }
 
-const projectDirectory = path.join(process.cwd(), "data/projects");
+const projectDirectory = path.join(process.cwd(), "data/code");
 
 export const getSortedPosts = () => {
   //Reads all the files in the post directory

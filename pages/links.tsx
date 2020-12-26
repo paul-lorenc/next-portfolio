@@ -6,8 +6,8 @@ export default function Links() {
   return (
     <>
       <Container>
-        <div className="flex flex-col items-stretch space-y-4 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl">
-          <div className="flex flex-col border border-gray-800 mx-4 p-4 sm:p-8">
+        <div className="flex flex-col space-y-4 max-w-2xl ">
+          <div className="flex flex-col border border-gray-800 px-6 pb-6 pt-2">
             <h1 className="font-bold text-md md:text-lg tracking-tight mb-2 text-white">
               About Me
             </h1>
@@ -34,7 +34,8 @@ export default function Links() {
               </p>
             </div>
           </div>
-          <div className="flex mx-2 sm:mx-4 md:mx-8 lg:mx-12 justify-between p-4">
+          <div className="flex justify-between px-6 py-4">
+            <CodeIcon />
             <CodeIcon />
             <CodeIcon />
             <CodeIcon />

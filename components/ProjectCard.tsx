@@ -10,7 +10,7 @@ export const ProjectCard: React.FC<any> = (props: Props) => {
     <Link key={p.slug} href={`/code/${p.slug}`}>
       <a
         key={p.slug}
-        className="flex items-center border border-gray-800 hover:border-gray-700 p-5"
+        className="flex items-center border border-gray-800 hover:border-gray-700 px-5 py-3"
       >
         <div className="pr-4">
           <Image
@@ -18,6 +18,7 @@ export const ProjectCard: React.FC<any> = (props: Props) => {
             height={32}
             width={32}
             quality={40}
+            alt=""
             priority
             layout="fixed"
           />

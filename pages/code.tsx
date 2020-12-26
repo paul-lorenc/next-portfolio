@@ -16,7 +16,7 @@ export default function Code(props: Props) {
   return (
     <>
       <Container>
-        <div className="text-gray-100 space-y-4 max-w-sm sm:max-w-lg md:max-w-2xl">
+        <div className="text-gray-100 space-y-4 max-w-md sm:max-w-lg md:max-w-2xl">
           {sortedPosts.map((p) => {
             return <ProjectCard project={p} />;
           })}
