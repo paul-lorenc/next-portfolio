@@ -1,6 +1,6 @@
 ## [Next.js Portfolio Website](https://paul-lorenc.com)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The website is currently deployed [`here`](https://paul-lorenc.com).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). 
 
 ## Overview
 The website features 4 main pages `/`, `/code`, `/images`, and `/links`:
