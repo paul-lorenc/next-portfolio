@@ -1,4 +1,4 @@
-## Next.js Portfolio Website
+## [Next.js Portfolio Website](https://paul-lorenc.com)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The website is currently deployed [`here`](https://paul-lorenc.com).
 
@@ -37,7 +37,7 @@ and then add your Slate API key:
 
 create a `.env.local` file in the root directory and add an environment variable called `SLATE_API_KEY=yourapikeyhere` in order for the site to build correctly. You can find a slate API key under the "API" section of the main Slate menu. After you complete this, run the website using:
 ```
-npm run start
+npm run dev
 ```
 
 ## Deploy on Vercel
