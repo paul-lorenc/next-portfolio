@@ -1,4 +1,4 @@
-import { NextSeo, ArticleJsonLd } from "next-seo";
+import { NextSeo } from "next-seo";
 import { SlateImage } from "@/lib/slate";
 
 interface Props {
