@@ -1,7 +1,7 @@
 import { Container } from "@/components/Container";
 import ProjectSeo from "@/components/ProjectSeo";
 
-export default function ProjectLayout({ children, frontMatter }: any) {
+export default function ProjectgLayout({ children, frontMatter }: any) {
   return (
     <Container>
       <ProjectSeo {...frontMatter} />
