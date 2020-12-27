@@ -58,6 +58,7 @@ purge: [
 - [`MDX`](https://mdxjs.com/)
 - [`next-mdx-remote`](https://github.com/hashicorp/next-mdx-remote)
 - [`@mdx-js/react`](https://www.npmjs.com/package/@mdx-js/react)
+- [`globby`](https://www.npmjs.com/package/globby)
 
 ## Resources
 I would not have been able to make this site without the help of extensive online resources surrounding these technologies, here are the resources I used to put together this site:
