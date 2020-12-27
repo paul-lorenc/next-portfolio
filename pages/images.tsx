@@ -48,5 +48,6 @@ export async function getStaticProps() {
     props: {
       slates,
     },
+    revalidate: 100,
   };
 }

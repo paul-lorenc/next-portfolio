@@ -24,7 +24,7 @@ export default function Images(props: Props) {
     <>
       <Container>
         <ImageSeo slateimg={seoprops} />
-        <div className="flex flex-col">
+        <div className="flex flex-col space-y-4">
           <p className="text-gray-200 font-bold text-lg pb-5 pl-8">
             {props.slatename}
           </p>
