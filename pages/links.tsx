@@ -59,11 +59,27 @@ export default function Links() {
             </div>
           </div>
           <div className="flex justify-between border border-gray-800 py-4 sm:px-4">
-            <GithubIcon />
-            <LinkedinIcon />
-            <FlowerIcon />
-            <SlateIcon />
-            <MailIcon />
+            <a href="https://github.com/paul-lorenc" aria-label="Github">
+              <GithubIcon />
+            </a>
+            <a href="www.linkedin.com/in/paul--lorenc" aria-label="LinkedIn">
+              <LinkedinIcon />
+            </a>
+            <a
+              href="https://paul-lorenc.github.io/gradflower/"
+              aria-label="Generative Flower Project"
+            >
+              <FlowerIcon />
+            </a>
+            <a
+              href="https://slate.host/lorenc"
+              aria-label="Slate Image Hosting"
+            >
+              <SlateIcon />
+            </a>
+            <a href="mailto:pjlorenc@gmail.com" aria-label="Gmail">
+              <MailIcon />
+            </a>
           </div>
         </div>
       </Container>

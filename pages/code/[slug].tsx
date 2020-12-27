@@ -10,7 +10,6 @@ import MDXComponents from "@/data/MDXComponents";
 export default function Code({ slug, source, frontMatter }: any) {
   const content = hydrate(source, { components: MDXComponents });
   frontMatter = { ...frontMatter, slug };
-  console.log(frontMatter);
   return (
     <>
       <ProjectLayout frontMatter={frontMatter}>
