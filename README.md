@@ -28,15 +28,17 @@ I styled this website using [`Tailwind CSS`](https://tailwindcss.com/)
 
 ```
 bash
-$ git clone https://github.com/leerob/leerob.io.git
-$ cd leerob.io
-$ yarn
-$ yarn dev
+$ git clone https://github.com/paul-lorenc/next-portfolio.git
+$ cd next-portfolio
+$ npm install
 ```
 
 and then add your Slate API key:
 
-create a `.env.local` file in the root directory and add an environment variable called `SLATE_API_KEY=yourapikeyhere` in order for the site to build correctly. You can find a slate API key under the "API" section of the main Slate menu. 
+create a `.env.local` file in the root directory and add an environment variable called `SLATE_API_KEY=yourapikeyhere` in order for the site to build correctly. You can find a slate API key under the "API" section of the main Slate menu. After you complete this, run the website using:
+```
+npm run start
+```
 
 ## Deploy on Vercel
 I deployed my Nextjs site using Vercel, this was relatively straightforward, I needed to add an environment variable using their interface and also needed to make my purge entry of my `tailwind.config.ts` account for `.ts` and `.tsx` files:
