@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://paul-lorenc/sitemap.xml
+Sitemap: https://paul-lorenc.com/sitemap.xml

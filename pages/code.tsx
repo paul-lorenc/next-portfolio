@@ -1,11 +1,13 @@
-import { CodeIcon } from "@/components/svgs/CodeIcon";
 import { Container } from "@/components/Container";
-import { ImageIcon } from "@/components/svgs/ImageIcon";
-import Image from "next/image";
 import { getSortedPosts } from "@/lib/mdx";
-import Link from "next/link";
 import { Project } from "@/lib/mdx";
 import { ProjectCard } from "@/components/ProjectCard";
+import { NextSeo } from "next-seo";
+
+const url: string = "https://paul-lorenc.com/code";
+const title: string = "Code Projects - Paul Lorenc";
+const description: string =
+  "Portfolio of software projects I have completed over the years, along with writeups highlighting details about different projects.";
 
 interface Props {
   sortedPosts: Project[];
@@ -16,7 +18,23 @@ export default function Code(props: Props) {
   return (
     <>
       <Container>
-        <div className="text-gray-100 space-y-4 max-w-md sm:max-w-lg md:max-w-2xl">
+        <NextSeo
+          title={title}
+          description={description}
+          canonical={url}
+          openGraph={{
+            url,
+            title,
+            description,
+            images: [
+              {
+                url: "https://paul-lorenc.com/banners/code-banner.png",
+                alt: description,
+              },
+            ],
+          }}
+        />
+        <div className="text-gray-100 max-w-2xl space-y-4">
           {sortedPosts.map((p) => {
             return <ProjectCard project={p} />;
           })}

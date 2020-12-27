@@ -17,7 +17,7 @@ export default function Home(props: Props) {
   return (
     <>
       <Container>
-        <div className="max-w-2xl space-y-4 px-8">
+        <div className="max-w-2xl space-y-4">
           {feedarr.map((s: any) => {
             if (s.type === "post") {
               return <ProjectCard project={s.object} />;

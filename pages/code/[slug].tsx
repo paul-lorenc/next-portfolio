@@ -1,29 +1,21 @@
 import { getAllProjectSlugs, getProjectBySlug } from "@/lib/mdx";
-import Head from "next/head";
 import matter from "gray-matter";
-import { Container } from "@/components/Container";
+import ProjectLayout from "@/layouts/ProjectLayout";
 // @ts-ignore
 import renderToString from "next-mdx-remote/render-to-string";
 // @ts-ignore
 import hydrate from "next-mdx-remote/hydrate";
 import MDXComponents from "@/data/MDXComponents";
 
-export default function Code({ source, frontMatter }: any) {
-  const content = hydrate(source, { MDXComponents });
+export default function Code({ slug, source, frontMatter }: any) {
+  const content = hydrate(source, { components: MDXComponents });
+  frontMatter = { ...frontMatter, slug };
+  console.log(frontMatter);
   return (
     <>
-      <Head>
-        <title>{frontMatter.title}</title>
-      </Head>
-      <Container>
-        <div className="text-gray-100 max-w-md md:max-w-xl md:max-w-2xl">
-          <div className="text-center p-4">
-            <h1 className="text-3xl font-semibold">{frontMatter.title}</h1>
-            <span className="font-thin">{frontMatter.date}</span>
-          </div>
-          <div>{content}</div>
-        </div>
-      </Container>
+      <ProjectLayout frontMatter={frontMatter}>
+        <div>{content}</div>
+      </ProjectLayout>
     </>
   );
 }
@@ -44,6 +36,7 @@ export async function getStaticProps({ params }: any) {
   });
   return {
     props: {
+      slug: params.slug,
       source: mdxSource,
       frontMatter: data,
     },

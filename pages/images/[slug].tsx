@@ -7,6 +7,7 @@ import {
 import { Container } from "@/components/Container";
 import Link from "next/link";
 import Image from "next/image";
+import ImageSeo from "@/components/ImageSeo";
 
 interface Props {
   slateimgs: SlateImage[];
@@ -18,9 +19,11 @@ export default function Images(props: Props) {
   if (slateimgs.length == 0) {
     return <Container></Container>;
   }
+  let seoprops: SlateImage = { ...slateimgs[0], slatename: props.slatename };
   return (
     <>
       <Container>
+        <ImageSeo slateimg={seoprops} />
         <div className="flex flex-col">
           <p className="text-gray-200 font-bold text-lg pb-5 pl-8">
             {props.slatename}

@@ -3,7 +3,7 @@ export const LinkIcon: React.FC<any> = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="-30 -47 160 160"
-      className="p-1 sm:p-0 max-h-16 text-white hover:text-gray-600 fill-current"
+      className="p-0 sm:p-1 max-h-16 text-white hover:text-gray-600 fill-current"
       width="64"
     >
       <path

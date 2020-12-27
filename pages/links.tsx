@@ -1,11 +1,35 @@
 import { Container } from "@/components/Container";
-import { CodeIcon } from "@/components/svgs/CodeIcon";
-import { LinkIcon } from "@/components/svgs/LinkIcon";
+import { FlowerIcon } from "@/components/svgs/FlowerIcon";
+import { GithubIcon } from "@/components/svgs/GithubIcon";
+import { LinkedinIcon } from "@/components/svgs/LinkedinIcon";
+import { SlateIcon } from "@/components/svgs/SlateIcon";
+import { MailIcon } from "@/components/svgs/MailIcon";
+import { NextSeo } from "next-seo";
+
+const url: string = "https://paul-lorenc.com/links";
+const title: string = "Links - Paul Lorenc";
+const description: string = "Index of my other webpages";
 
 export default function Links() {
   return (
     <>
       <Container>
+        <NextSeo
+          title={title}
+          description={description}
+          canonical={url}
+          openGraph={{
+            url,
+            title,
+            description,
+            images: [
+              {
+                url: "https://paul-lorenc.com/banners/link-banner.png",
+                alt: description,
+              },
+            ],
+          }}
+        />
         <div className="flex flex-col space-y-4 max-w-2xl ">
           <div className="flex flex-col border border-gray-800 px-6 pb-6 pt-2">
             <h1 className="font-bold text-md md:text-lg tracking-tight mb-2 text-white">
@@ -34,12 +58,12 @@ export default function Links() {
               </p>
             </div>
           </div>
-          <div className="flex justify-between px-6 py-4">
-            <CodeIcon />
-            <CodeIcon />
-            <CodeIcon />
-            <CodeIcon />
-            <CodeIcon />
+          <div className="flex justify-between border border-gray-800 py-4 sm:px-4">
+            <GithubIcon />
+            <LinkedinIcon />
+            <FlowerIcon />
+            <SlateIcon />
+            <MailIcon />
           </div>
         </div>
       </Container>
