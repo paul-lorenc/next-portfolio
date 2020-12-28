@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Overview
 The website features 4 main pages `/`, `/code`, `/images`, and `/links`:
 
-- `/` - displays the 10 most recent [`Slates`](https://slate.host/lorenc) and [`MDX`](https://mdxjs.com/) posts in order from most-recent to oldest.
+- `/` - displays the 10 most recent [`Slates`](https://slate.host/lorenc) and [`MDX`](https://mdxjs.com/) posts in order.
 - `/code` - displays all of my code projects, with most recently updated posts first, which are held in mdx files under the hood.
 - `/images` - displays all of my [`Slates`](https://slate.host/lorenc), with most recently updated slates first. 
 - `/links` - a static page displaying a small bio and links to my other webpages.
