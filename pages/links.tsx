@@ -35,7 +35,7 @@ export default function Links() {
             <h1 className="font-bold text-md md:text-lg tracking-tight mb-2 text-white">
               About Me
             </h1>
-            <div className="prose leading-6 text-gray-300 space-y-2 text-justify">
+            <div className="prose leading-6 text-gray-300 space-y-2">
               <p>
                 Hello, my name is Paul Lorenc, thank you for stopping by my
                 website. I currently work as a software engineer for&nbsp;

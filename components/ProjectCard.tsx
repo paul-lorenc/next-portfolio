@@ -8,7 +8,7 @@ export const ProjectCard: React.FC<any> = (props: Props) => {
   let p: Project = props.project;
   return (
     <Link key={p.slug} href={`/code/${p.slug}`}>
-      <a className="flex items-center text-justify border border-gray-800 hover:border-gray-700 px-6 py-3">
+      <a className="flex items-center border border-gray-800 hover:border-gray-700 px-6 py-3">
         <div className="pr-4">
           <Image
             src={p.src}

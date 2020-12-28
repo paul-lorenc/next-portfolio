@@ -2,10 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
 html {
   min-width: 360px;
   scroll-behavior: smooth;
   background-color: black;
+}
+
+.prose a {
+  @apply text-blue-500 hover:text-blue-700 hover:underline;
+}
+
+p {
+  @apply text-gray-200 text-sm font-thin sm:text-base sm:font-normal pb-0.5;
+}
+
+li {
+  @apply text-white text-sm font-thin sm:text-base sm:font-normal pb-1;
+}
+
+li:before {
+  content: "- ";
+  text-indent: -5px;
+}
+
+.prose hr {
+  @apply my-2;
+}
+
+h1 {
+  @apply text-3xl font-bold mt-2 mb-3;
+}
+
+h2 {
+  @apply text-2xl font-bold my-2;
+}
+
+h3 {
+  @apply text-xl font-bold mt-1 mb-2;
+}
+
+.prose pre {
+  @apply whitespace-pre;
+}
+
+.prose code {
+  @apply whitespace-pre text-gray-200 text-sm md:text-base px-1 py-0.5 border border-gray-700 rounded-md bg-gray-900;
 }
 
 #__next {
