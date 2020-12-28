@@ -12,46 +12,48 @@ html {
   scroll-behavior: smooth;
   background-color: black;
 }
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.prose pre {
+  @apply overflow-x-scroll border border-gray-700 bg-gray-900;
+}
+
+.prose code {
+  @apply text-gray-200 px-1 py-0.5 border border-gray-800 rounded-md bg-gray-900;
+}
 
 .prose a {
   @apply text-blue-500 hover:text-blue-700 hover:underline;
 }
-
-p {
-  @apply text-gray-200 text-sm font-thin sm:text-base sm:font-normal pb-0.5;
-}
-
-li {
-  @apply text-white text-sm font-thin sm:text-base sm:font-normal pb-1;
-}
-
-li:before {
-  content: "- ";
-  text-indent: -10px;
+.prose p {
+  @apply text-gray-200 text-base font-normal pb-0.5;
 }
 
 .prose hr {
-  @apply my-2;
+  @apply my-4;
 }
 
-h1 {
-  @apply text-3xl font-bold mt-2 mb-3;
+.prose h1 {
+  @apply text-white text-3xl font-bold mt-2 mb-3;
 }
 
-h2 {
-  @apply text-2xl font-bold my-2;
+.prose h2 {
+  @apply text-white text-2xl font-bold my-2;
 }
 
-h3 {
-  @apply text-xl font-bold mt-1 mb-2;
+.prose h3 {
+  @apply text-white text-xl font-bold mt-1 mb-2;
 }
 
-pre code {
-  @apply bg-gray-800 rounded-md;
-}
-
-.prose code {
-  @apply whitespace-pre text-gray-200 text-xs md:text-base px-1 py-0.5 border border-gray-700 rounded-md bg-gray-900;
+.prose h4 {
+  @apply text-white text-lg font-bold mt-1 mb-1;
 }
 
 #__next {

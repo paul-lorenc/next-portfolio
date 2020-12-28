@@ -10,7 +10,7 @@ export default function ProjectgLayout({ children, frontMatter }: any) {
           {frontMatter.title}
         </h1>
         <p className="text-white text-sm mb-4">{frontMatter.date}</p>
-        <div className="max-w-none w-full">{children}</div>
+        <div className="max-w-none flex-wrap">{children}</div>
       </article>
     </Container>
   );

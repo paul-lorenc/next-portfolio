@@ -24,16 +24,16 @@ export default function Images(props: Props) {
     <>
       <Container>
         <ImageSeo slateimg={seoprops} />
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col">
           <p className="text-gray-200 font-bold text-lg pb-5 pl-8">
             {props.slatename}
           </p>
-          <div className="max-w-2xl space-y-4 px-8">
+          <div className="max-w-2xl px-8">
             {slateimgs.map((s: SlateImage) => {
               return (
-                <a>
+                <div className="mb-4">
                   <img src={s.url} width="100%" />
-                </a>
+                </div>
               );
             })}
           </div>
