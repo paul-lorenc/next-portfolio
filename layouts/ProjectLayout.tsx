@@ -6,7 +6,7 @@ export default function ProjectgLayout({ children, frontMatter }: any) {
     <ProjectContainer>
       <ProjectSeo {...frontMatter} />
       <article className="prose mx-auto">
-        <h1 className="justify-center">{frontMatter.title}</h1>
+        <h1>{frontMatter.title}</h1>
         <p>{frontMatter.date}</p>
         <div>{children}</div>
       </article>
