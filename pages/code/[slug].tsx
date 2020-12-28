@@ -13,9 +13,7 @@ export default function Code({ slug, source, frontMatter }: any) {
   return (
     <>
       <ProjectLayout frontMatter={frontMatter}>
-        <div className="flex flex-col prose max-w-none text-white">
-          {content}
-        </div>
+        <article>{content}</article>
       </ProjectLayout>
     </>
   );

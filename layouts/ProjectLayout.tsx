@@ -1,17 +1,15 @@
-import { Container } from "@/components/Container";
+import { ProjectContainer } from "@/components/ProjectContainer";
 import ProjectSeo from "@/components/ProjectSeo";
 
 export default function ProjectgLayout({ children, frontMatter }: any) {
   return (
-    <Container>
+    <ProjectContainer>
       <ProjectSeo {...frontMatter} />
-      <article className="flex flex-col justify-center items-center max-w-2xl">
-        <h1 className="text-white font-bold text-3xl sm:text-4xl md:text-5xl ">
-          {frontMatter.title}
-        </h1>
-        <p className="text-white text-sm mb-4">{frontMatter.date}</p>
-        <div className="max-w-none w-full">{children}</div>
+      <article className="prose mx-auto">
+        <h1 className="justify-center">{frontMatter.title}</h1>
+        <p>{frontMatter.date}</p>
+        <div>{children}</div>
       </article>
-    </Container>
+    </ProjectContainer>
   );
 }

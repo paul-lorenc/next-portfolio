@@ -1,55 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
-}
-
 html {
   min-width: 360px;
   scroll-behavior: smooth;
   background-color: black;
-}
-
-.prose pre {
-  @apply overflow-auto block border border-gray-700 bg-gray-900;
-}
-
-.prose code {
-  @apply text-gray-200 inline px-1 py-0.5 border border-gray-800 rounded-md bg-gray-900;
-}
-
-.prose a {
-  @apply text-blue-500 hover:text-blue-700 hover:underline;
-}
-.prose p {
-  @apply text-gray-200 text-base font-normal mt-0 mb-1;
-}
-
-.prose hr {
-  @apply my-4;
-}
-
-.prose h1 {
-  @apply text-white text-3xl font-bold mt-2 mb-3;
-}
-
-.prose h2 {
-  @apply text-white text-2xl font-bold my-2;
-}
-
-.prose h3 {
-  @apply text-white text-xl font-bold mt-1 mb-2;
-}
-
-.prose h4 {
-  @apply text-white text-lg font-bold mt-1 mb-1;
-}
-
-.prose :not(pre) > code.language-text {
-  white-space: pre-line;
 }
 
 #__next {
@@ -58,12 +10,17 @@ html {
   min-height: 100vh;
 }
 
-.sticky-nav {
-  position: sticky;
-  z-index: 10;
-  top: 0;
-  backdrop-filter: saturate(180%) blur(20px);
-  transition: background-color 0.1 ease-in-out;
+.prose pre {
+  @apply border text-gray-300 border-gray-800 bg-gray-900;
+}
+
+.prose code {
+  @apply border text-gray-300 px-1 py-0.5 border-gray-800 rounded-md bg-gray-900;
+}
+
+.prose img {
+  /* Don't apply styles to next/image */
+  @apply m-0;
 }
 
 pre::-webkit-scrollbar {
@@ -73,5 +30,12 @@ pre::-webkit-scrollbar {
 pre {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  overflow: auto;
+}
+
+.sticky-nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: background-color 0.1 ease-in-out;
 }

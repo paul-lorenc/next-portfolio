@@ -3,18 +3,14 @@ title: "Next-Portfolio"
 date: "December 27, 2020"
 author: "Paul Lorenc"
 excerpt: "After learning about Nextjs, I decided to rebuild my portfolio website using Nextjs, Typescript, and TailwindCSS"
-src: "/icons/p5js.png"
+src: "/icons/nextjs.png"
 ---
 
----
-
-### [Next.js Portfolio Website](https://paul-lorenc.com)
+### [View The Project Here](https://paul-lorenc.com)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [create-next-app](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
----
-
-### Overview
+## Overview
 
 The website features 4 main pages `/`, `/code`, `/images`, and `/links`:
 
@@ -30,20 +26,20 @@ The website also features two [dynamic routes](https://nextjs.org/docs/routing/d
 - `/code/[slug]` - displays the detailed content of the corresponding code project
 - `/images/[slug]` - displays the contents of the corresponding Slate
 
-### Content Management
+## Content Management
 
 This website was built because my first react website was hard coded, which made content management a pain. For this website, I add new code projects by writing up the post in [MDX](https://mdxjs.com/), and adding it to the `/data/code` directory, then pushing to the main branch which will automatically redeploy my app with [Vercel](https://vercel.com/). As long as I correctly add the [Front Matter](https://jekyllrb.com/docs/front-matter/) to the post, I am able to parse it programatically using [next-mdx-advanced](https://github.com/hashicorp/next-mdx-enhanced) and add it to the website's feeds automatically.
 
 For image hosting I use [Slate](slate.host). They give you access to simple REST API which allows you to get all of your slates, and get slates by ID, which is really all you need for a simple portfolio like I have made. Slate has been continuing to add support for more filetypes which could be useful in the future. To add new images I simply upload new files, then add them to existing slates or create a new slate and add them there.
 
-### Styling
+## Styling
 
 I styled this website using [Tailwind CSS](https://tailwindcss.com/)
 
-### Running Locally
+## Running Locally
 
 ```bash
-$ git clone https:github. com/ asdgag/ asdgh asd/h/asdfha/hafd/ha/dfh/adfh
+$ git clone longstringherehhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
 $ cd next-portfolio
 $ npm install
 ```
@@ -56,11 +52,11 @@ create a `.env.local` file in the root directory and add an environment variable
 npm run dev
 ```
 
-### Deploy on Vercel
+## Deploy on Vercel
 
 I deployed my Nextjs site using Vercel, this was relatively straightforward, I needed to add an environment variable using their interface and also needed to make my purge entry of my `tailwind.config.ts` account for `.ts` and `.tsx` files.
 
-### Built Using
+## Built Using
 
 - [Next.js](https://nextjs.org/)
 - [Vercel](https://vercel.com/)
@@ -72,7 +68,7 @@ I deployed my Nextjs site using Vercel, this was relatively straightforward, I n
 - [@mdx-js/react](https://www.npmjs.com/package/@mdx-js/react)
 - [globby](https://www.npmjs.com/package/globby)
 
-### Resources
+## Resources
 
 I would not have been able to make this site without the help of extensive online resources surrounding these technologies, here are the resources I used to put together this site:
 
