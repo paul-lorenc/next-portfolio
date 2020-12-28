@@ -42,7 +42,7 @@ module.exports = {
             "h3,h4": {
               color: theme("colors.gray.200"),
               "scroll-margin-top": spacing[12],
-              "margin-top": spacing[1],
+              "margin-top": spacing[2],
               "margin-bottom": spacing[2],
             },
             hr: { borderColor: theme("colors.gray.700") },

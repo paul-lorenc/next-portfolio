@@ -1,0 +1,21 @@
+---
+title: "PySAT Sudoku Solver"
+date: "March 7, 2020"
+author: "Paul Lorenc"
+excerpt: "A python sudoku solver implemented using PySAT, a python toolset for solving boolean formulas in conjunctive normal form"
+src: "/icons/pysat.png"
+---
+
+<Image
+  src="/projects/pysat-sudoku-solver/largesudoku.png"
+  width={1152}
+  height={1160}
+  layout="responsive"
+  alt="a large sudoku problem"
+/>
+
+#### Sudoku is an NP-complete problem
+
+To create a sudoku solving algorithm, one could try and create and optimize an algorithm specific to the sudoku problem. However, the more practical strategy, which I used, was to map a given sudoku problem into a SAT problem, and use a modern SAT solver to efficiently solve the statement, which is then mapped back into sudoku form.
+
+For this project, I created a series of algorithms read in a sudoku, map it to an instance of a CNF problem, then solve it using ORTools. This included adding boolean logic to constrain known values, constrain one number in each row, column, and box, and breaking symmetry in order to efficiently search for solutions. Overall, my implementation was able to complete large, 30x30 sudokus in under a minute.

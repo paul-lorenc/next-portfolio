@@ -1,0 +1,21 @@
+---
+title: "Python SAT Solver"
+date: "February 27, 2020"
+author: "Paul Lorenc"
+excerpt: "A python SAT solver I built implementing two watched literals."
+src: "/icons/python.png"
+---
+
+<Image
+  src="/projects/python-sat-solver/3sat-problem.png"
+  width={691}
+  height={600}
+  layout="responsive"
+  alt="a basic 3-sat problem displayed with a graph"
+/>
+
+I completed this project for CIS189 at UPenn, called "Solving Hard Problems in Practice." This class focused on using programming tools to solve NP-hard problems.
+
+The Boolean Satisfiability Problem, or more simply, SAT problem, asks for the 'solving set' of TRUE and FALSE values which makes a Boolean statement TRUE. The SAT problem is proven to be NP-complete, which means that any NP problem is at most as hard to solve as the SAT problem. In turn this means that if you can reduce the SAT problem to another problem (in polynomial time) then the problem can be proved to be NP-complete (there are more steps to this but this is the high level idea). Because of how abstract the problem is, creating polynomial transformations from this problem is useful in proving NP-completeness.
+
+The SAT solver itself is an implementation of the [Davis–Putnam–Logemann–Loveland](https://en.wikipedia.org/wiki/DPLL_algorithm#:~:text=In%20logic%20and%20computer%20science,solving%20the%20CNF%2DSAT%20problem.) (DPLL) algorithm using Two-Watched literals, it also implements Unit Propagation and a static, two-sided version of the Jeroslaw-Wang decision heuristic. These additions make this implementation rival the performance of state-of-the-art SAT solvers of the 80's and 90's. Unfortunately I cannot release any code publically due to the nature of the course, however, I am extremely happy with how this project turned out, and would love to discuss implementation details personally as long as you are not a current 189 student!
