@@ -4,7 +4,7 @@ import { FooterIcon } from "./svgs/FooterIcon";
 
 export const Footer: React.FC<any> = () => {
   return (
-    <footer className="flex bg-black flex-col max-w-2xl items-center p-8">
+    <footer className="bg-black max-w-2xl mt-8 mb-4">
       <FooterIcon />
     </footer>
   );

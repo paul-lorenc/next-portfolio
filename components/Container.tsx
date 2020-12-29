@@ -9,9 +9,9 @@ import { LinkIcon } from "@/components/svgs/LinkIcon";
 export const Container: React.FC = ({ children }) => {
   return (
     <div className="flext flex-col bg-black font-serif h-screen">
-      <nav className="sticky-nav flex justify-between max-w-6xl w-full items-center my-4 pt-2 px-8 md:my-8 mx-auto bg-black bg-opacity-60">
+      <nav className="sticky-nav flex justify-between max-w-2xl lg:max-w-3xl xl:max-w-6xl  items-center p-2 lg:px-8 lg:my-8 mx-auto bg-black bg-opacity-60 xl:pl-25">
         <Link href="/">
-          <a className="md:pl-8 lg:pl-12 xl:pl-17" aria-label="Home">
+          <a className="xl:mx-20" aria-label="Home">
             <Monogram />
           </a>
         </Link>
