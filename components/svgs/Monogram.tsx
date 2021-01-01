@@ -2,7 +2,7 @@ export const Monogram: React.FC<any> = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 192 192"
+      viewBox="-23 0 192 192"
       className="p-1 sm:p-0 max-h-16"
       width="64"
     >
