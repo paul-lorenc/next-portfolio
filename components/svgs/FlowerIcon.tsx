@@ -3,7 +3,7 @@ export const FlowerIcon: React.FC<any> = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="-2 0 152 152"
-      className="p-0 sm:p-1 max-h-10 sm:max-h-16 text-gray-600 hover:text-white fill-current"
+      className="max-h-16 text-gray-600 hover:text-white fill-current"
       width="64"
     >
       <path

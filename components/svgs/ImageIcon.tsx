@@ -3,7 +3,7 @@ export const ImageIcon: React.FC<any> = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       data-name="Layer 1"
-      viewBox="-15 -55 178 178"
+      viewBox="-15 -65 190 190"
       className="max-h-16 text-white hover:text-gray-600 fill-current"
       width="64"
     >

@@ -12,6 +12,7 @@
   --scrollbarWidth: 0px;
   --windowWidth: calc(100vw - var(--scrollbarWidth));
   --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth) * 2);
+  --linkWidth: calc(var(--windowWidth) - var(--gutterWidth) * 2);
   --layoutWidthMax: 1000px;
   --columnCountMax: 1;
   --heroColumnCount: 1;
@@ -20,6 +21,7 @@
 @media (min-width: 600px) {
   .ZRoot {
     --columnCountMax: 2;
+    --linkWidth: 568px;
   }
 }
 @media (min-width: 900px) {
@@ -45,8 +47,25 @@
   width: var(--layoutWidth);
 }
 
-.ZLayoutW {
-  width: var(--layoutWidth);
+.LinkLayout {
+  width: var(--linkWidth);
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.LinkMonogram {
+  display: grid;
+  place-items: center;
+}
+
+.ZWW {
+  width: var(--windowWidth);
+}
+
+.LinkCard {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  place-items: center;
 }
 
 .ZChildren--Container {
