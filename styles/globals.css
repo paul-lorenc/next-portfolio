@@ -1,3 +1,9 @@
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   min-width: 360px;
   scroll-behavior: smooth;
@@ -30,6 +36,11 @@ pre::-webkit-scrollbar {
 pre {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr max-content max-content max-content;
 }
 
 .sticky-nav {

@@ -34,7 +34,7 @@ export default function Code(props: Props) {
             ],
           }}
         />
-        <div className="text-gray-100 max-w-2xl space-y-4 items-center">
+        <div className="text-gray-100 max-w-4xl space-y-4 items-center px-4">
           {sortedPosts.map((p) => {
             return <ProjectCard project={p} />;
           })}

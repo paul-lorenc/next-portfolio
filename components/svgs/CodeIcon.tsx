@@ -3,7 +3,7 @@ export const CodeIcon: React.FC<any> = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 192 192"
-      className="p-1 sm:p-0 max-h-16 text-white hover:text-gray-600 fill-current"
+      className="max-h-16 text-white hover:text-gray-600 fill-current"
       width="64"
     >
       <defs />
