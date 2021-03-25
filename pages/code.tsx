@@ -16,7 +16,7 @@ interface Props {
 export default function Code(props: Props) {
   const sortedPosts: Project[] = props.sortedPosts;
   return (
-    <div className="items-center">
+    <div className="ZLayoutW mx-auto">
       <Container>
         <NextSeo
           title={title}
@@ -34,7 +34,7 @@ export default function Code(props: Props) {
             ],
           }}
         />
-        <div className="text-gray-100 max-w-4xl space-y-4 items-center px-4">
+        <div className="text-gray-100 w-full space-y-4">
           {sortedPosts.map((p) => {
             return <ProjectCard project={p} />;
           })}

@@ -33,7 +33,7 @@ export default function Images(props: Props) {
         }}
       />
       <Container>
-        <div className="max-w-4xl space-y-4">
+        <div className="space-y-4">
           {slates.map((s: SlateImage) => {
             return <ImageCard slateImage={s} />;
           })}
