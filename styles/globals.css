@@ -47,10 +47,14 @@
   width: var(--layoutWidth);
 }
 
+.WindowWidth {
+  width: var(--windowWidth);
+}
+
 .LinkLayout {
   width: var(--linkWidth);
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 35px;
 }
 
 .LinkMonogram {

@@ -13,6 +13,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { getSortedPosts } from "@/lib/mdx";
 import { getHeaderSlateImages, SlateImage } from "@/lib/slate";
 import { ImageCard } from "@/components/ImageCard";
+import { useScrollbarSize } from "react-scrollbar-size";
 
 const url: string = "https://paul-lorenc.com/links";
 const title: string = "Links - Paul Lorenc";
@@ -28,85 +29,98 @@ interface Props {
 }
 
 export default function Links(props: Props) {
+  const { height, width } = useScrollbarSize();
+  var scrollStyle = {
+    "--scrollbarWidth": width + "px",
+  } as React.CSSProperties;
   let feedarr: AbstractPost[] = props.feedarr;
   return (
-    <div className="ZRoot">
-      <NextSeo
-        title={title}
-        description={description}
-        canonical={url}
-        openGraph={{
-          url,
-          title,
-          description,
-          images: [
-            {
-              url: "https://paul-lorenc.com/banners/link-banner.png",
-              alt: description,
-            },
-          ],
-        }}
-      />
-      <div className="space-y-4 LinkLayout">
-        <div className="LinkMonogram">
-          <Monogram />
-        </div>
-        <div className="flex justify-between border border-gray-800 p-6">
-          <a href="https://github.com/paul-lorenc" aria-label="Github">
-            <GithubIcon />
-          </a>
-          <a href="www.linkedin.com/in/paul--lorenc" aria-label="LinkedIn">
-            <LinkedinIcon />
-          </a>
-          <a
-            href="https://paul-lorenc.github.io/gradflower/"
-            aria-label="Generative Flower Project"
-          >
-            <FlowerIcon />
-          </a>
-          <a href="https://slate.host/lorenc" aria-label="Slate Image Hosting">
-            <SlateIcon />
-          </a>
-          <a href="mailto:pjlorenc@gmail.com" aria-label="Gmail">
-            <MailIcon />
-          </a>
-        </div>
-        <div className="flex justify-between border border-gray-800 hover:border-gray-700 p-4 text-white text-2xl font-semibold">
-          <Link href="/code">
-            <div className="LinkCard ">
-              <CodeIcon />
+    <div className="ZRoot" style={scrollStyle}>
+      <div className="WindowWidth">
+        <NextSeo
+          title={title}
+          description={description}
+          canonical={url}
+          openGraph={{
+            url,
+            title,
+            description,
+            images: [
+              {
+                url: "https://paul-lorenc.com/banners/link-banner.png",
+                alt: description,
+              },
+            ],
+          }}
+        />
+        <div className="space-y-4 LinkLayout">
+          <div className="LinkMonogram">
+            <Monogram styles="max-h-16 text-white hover:text-gray-600 fill-current" />
+          </div>
+          <div className="flex justify-between border border-gray-800 p-6">
+            <a href="https://github.com/paul-lorenc" aria-label="Github">
+              <GithubIcon />
+            </a>
+            <a href="www.linkedin.com/in/paul--lorenc" aria-label="LinkedIn">
+              <LinkedinIcon />
+            </a>
+            <a
+              href="https://paul-lorenc.github.io/gradflower/"
+              aria-label="Generative Flower Project"
+            >
+              <FlowerIcon />
+            </a>
+            <a
+              href="https://slate.host/lorenc"
+              aria-label="Slate Image Hosting"
+            >
+              <SlateIcon />
+            </a>
+            <a href="mailto:pjlorenc@gmail.com" aria-label="Gmail">
+              <MailIcon />
+            </a>
+          </div>
+          <div className="flex justify-between border border-gray-800 hover:border-gray-700 p-4 text-white text-2xl font-semibold">
+            <Link href="/code">
+              <div className="LinkCard ">
+                <CodeIcon />
 
-              <h1 className="pl-4">{"Code Projects"}</h1>
-            </div>
-          </Link>
-        </div>
-        <div className="flex justify-between border border-gray-800 hover:border-gray-700 p-4 text-white text-2xl font-semibold">
-          <Link href="/images">
-            <div className="LinkCard ">
-              <ImageIcon />
+                <h1 className="pl-4">{"Code Projects"}</h1>
+              </div>
+            </Link>
+          </div>
+          <div className="flex justify-between border border-gray-800 hover:border-gray-700 p-4 text-white text-2xl font-semibold">
+            <Link href="/images">
+              <div className="LinkCard ">
+                <ImageIcon />
 
-              <h1 className="pl-4">{"Images"}</h1>
-            </div>
-          </Link>
-        </div>
-        <div className="flex justify-between border border-gray-800 hover:border-gray-700 p-4 text-white text-2xl font-semibold">
-          <Link href="/">
-            <div className="LinkCard ">
-              <Monogram />
+                <h1 className="pl-4">{"Images"}</h1>
+              </div>
+            </Link>
+          </div>
+          <div className="flex justify-between border border-gray-800 hover:border-gray-700 p-4 text-white text-2xl font-semibold">
+            <Link href="/">
+              <div className="LinkCard ">
+                <Monogram
+                  styles={
+                    "max-h-16 text-white hover:text-gray-600 fill-current"
+                  }
+                />
 
-              <h1 className="pl-4">{"Home"}</h1>
-            </div>
-          </Link>
-        </div>
-        <h1 className="text-white text-2xl font-semibold mt-5">Recent</h1>
-        <div className="max-w-4xl space-y-4">
-          {feedarr.map((s: any) => {
-            if (s.type === "post") {
-              return <ProjectCard project={s.object} />;
-            } else {
-              return <ImageCard slateImage={s.object} />;
-            }
-          })}
+                <h1 className="pl-4">{"Home"}</h1>
+              </div>
+            </Link>
+          </div>
+          <h1 className="text-white text-2xl font-semibold mt-5">Recent</h1>
+          <div className="max-w-4xl space-y-4">
+            {feedarr.map((s: any) => {
+              if (s.type === "post") {
+                return <ProjectCard project={s.object} />;
+              } else {
+                return <ImageCard slateImage={s.object} />;
+              }
+            })}
+          </div>
         </div>
       </div>
     </div>

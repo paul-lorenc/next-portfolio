@@ -1,10 +1,6 @@
-export const Monogram: React.FC<any> = () => {
+export const Monogram: React.FC<any> = (props: any) => {
   return (
-    <svg
-      viewBox="0 0 533.5 609.18"
-      className="max-h-16 text-white hover:text-gray-600 fill-current"
-      width="64"
-    >
+    <svg viewBox="0 0 533.5 609.18" className={props.styles} width="64">
       <path
         d="M412.52,149h-2.38a145.2,145.2,0,0,0-16.72-28.89C401.06,128.6,407.4,138.88,412.52,149Z"
         transform="translate(-112 -120.11)"

@@ -17,7 +17,7 @@ export const Container: React.FC = ({ children }) => {
         <nav className="sticky-nav ZNav--Container nav-grid py-4 items-center mx-auto bg-black bg-opacity-60">
           <Link href="/">
             <a aria-label="Home">
-              <Monogram />
+              <Monogram styles="max-h-14 text-white hover:text-gray-600 fill-current" />
             </a>
           </Link>
           <Link href="/code">
