@@ -25,43 +25,17 @@ export default function Home(props: Props) {
     "--scrollbarWidth": width + "px",
   } as React.CSSProperties;
   return (
-    <div className="ZRoot" style={scrollStyle}>
-      <div className="WindowWidth">
-        <div className="LinkLayout">
-          <nav className="sticky-nav nav-grid py-4 items-center mx-auto bg-black bg-opacity-60">
-            <Link href="/">
-              <a aria-label="Home">
-                <Monogram styles="max-h-14 text-white hover:text-gray-600 fill-current" />
-              </a>
-            </Link>
-            <Link href="/code">
-              <a aria-label="Code Projects">
-                <CodeIcon />
-              </a>
-            </Link>
-            <Link href="/images">
-              <a aria-label="Images">
-                <ImageIcon />
-              </a>
-            </Link>
-            <Link href="/links">
-              <a aria-label="Links">
-                <LinkIcon />
-              </a>
-            </Link>
-          </nav>
-          <div className="max-w-4xl space-y-4">
-            {feedarr.map((s: any) => {
-              if (s.type === "post") {
-                return <ProjectCard project={s.object} />;
-              } else {
-                return <ImageCard slateImage={s.object} />;
-              }
-            })}
-          </div>
-        </div>
+    <Container>
+      <div className="max-w-4xl space-y-4">
+        {feedarr.map((s: any) => {
+          if (s.type === "post") {
+            return <ProjectCard project={s.object} />;
+          } else {
+            return <ImageCard slateImage={s.object} />;
+          }
+        })}
       </div>
-    </div>
+    </Container>
   );
 }
 

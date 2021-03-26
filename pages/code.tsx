@@ -26,55 +26,29 @@ export default function Code(props: Props) {
     "--scrollbarWidth": width + "px",
   } as React.CSSProperties;
   return (
-    <div className="ZRoot" style={scrollStyle}>
-      <div className="WindowWidth">
-        <div className="LinkLayout">
-          <nav className="sticky-nav nav-grid py-4 items-center mx-auto bg-black bg-opacity-60">
-            <Link href="/">
-              <a aria-label="Home">
-                <Monogram styles="max-h-14 text-white hover:text-gray-600 fill-current" />
-              </a>
-            </Link>
-            <Link href="/code">
-              <a aria-label="Code Projects">
-                <CodeIcon />
-              </a>
-            </Link>
-            <Link href="/images">
-              <a aria-label="Images">
-                <ImageIcon />
-              </a>
-            </Link>
-            <Link href="/links">
-              <a aria-label="Links">
-                <LinkIcon />
-              </a>
-            </Link>
-          </nav>
-          <NextSeo
-            title={title}
-            description={description}
-            canonical={url}
-            openGraph={{
-              url,
-              title,
-              description,
-              images: [
-                {
-                  url: "https://paul-lorenc.com/banners/code-banner.png",
-                  alt: description,
-                },
-              ],
-            }}
-          />
-          <div className="text-gray-100 w-full space-y-4">
-            {sortedPosts.map((p) => {
-              return <ProjectCard project={p} />;
-            })}
-          </div>
-        </div>
+    <Container>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url,
+          title,
+          description,
+          images: [
+            {
+              url: "https://paul-lorenc.com/banners/code-banner.png",
+              alt: description,
+            },
+          ],
+        }}
+      />
+      <div className="text-gray-100 space-y-4">
+        {sortedPosts.map((p) => {
+          return <ProjectCard project={p} />;
+        })}
       </div>
-    </div>
+    </Container>
   );
 }
 

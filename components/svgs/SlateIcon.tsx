@@ -3,7 +3,7 @@ export const SlateIcon: React.FC<any> = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="-5 0 80 80"
-      className="max-h-16 text-white hover:text-gray-600 fill-current"
+      className="max-h-10 sm:max-h-16 text-white hover:text-gray-600 fill-current"
       width="64"
     >
       <g clipRule="evenodd" fill="currentColor" fillRule="evenodd">

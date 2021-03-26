@@ -27,7 +27,7 @@ export default function Images(props: Props) {
     "--scrollbarWidth": width + "px",
   } as React.CSSProperties;
   return (
-    <div>
+    <Container>
       <NextSeo
         title={title}
         description={description}
@@ -44,40 +44,12 @@ export default function Images(props: Props) {
           ],
         }}
       />
-      <div className="ZRoot" style={scrollStyle}>
-        <div className="WindowWidth">
-          <div className="LinkLayout">
-            <nav className="sticky-nav nav-grid py-4 items-center mx-auto bg-black bg-opacity-60">
-              <Link href="/">
-                <a aria-label="Home">
-                  <Monogram styles="max-h-14 text-white hover:text-gray-600 fill-current" />
-                </a>
-              </Link>
-              <Link href="/code">
-                <a aria-label="Code Projects">
-                  <CodeIcon />
-                </a>
-              </Link>
-              <Link href="/images">
-                <a aria-label="Images">
-                  <ImageIcon />
-                </a>
-              </Link>
-              <Link href="/links">
-                <a aria-label="Links">
-                  <LinkIcon />
-                </a>
-              </Link>
-            </nav>
-            <div className="space-y-4">
-              {slates.map((s: SlateImage) => {
-                return <ImageCard slateImage={s} />;
-              })}
-            </div>
-          </div>
-        </div>
+      <div className="space-y-4">
+        {slates.map((s: SlateImage) => {
+          return <ImageCard slateImage={s} />;
+        })}
       </div>
-    </div>
+    </Container>
   );
 }
 export async function getStaticProps() {

@@ -14,6 +14,7 @@ import { getSortedPosts } from "@/lib/mdx";
 import { getHeaderSlateImages, SlateImage } from "@/lib/slate";
 import { ImageCard } from "@/components/ImageCard";
 import { useScrollbarSize } from "react-scrollbar-size";
+import { Footer } from "@/components/Footer";
 
 const url: string = "https://paul-lorenc.com/links";
 const title: string = "Links - Paul Lorenc";
@@ -35,8 +36,8 @@ export default function Links(props: Props) {
   } as React.CSSProperties;
   let feedarr: AbstractPost[] = props.feedarr;
   return (
-    <div className="ZRoot" style={scrollStyle}>
-      <div className="WindowWidth">
+    <div className="ZRoot WindowWidth" style={scrollStyle}>
+      <div className="LayoutWidth mx-auto mt-8">
         <NextSeo
           title={title}
           description={description}
@@ -53,11 +54,11 @@ export default function Links(props: Props) {
             ],
           }}
         />
-        <div className="space-y-4 LinkLayout">
+        <div className="space-y-4">
           <div className="LinkMonogram">
-            <Monogram styles="max-h-16 text-white hover:text-gray-600 fill-current" />
+            <Monogram styles="max-h-24 text-white hover:text-gray-600 fill-current" />
           </div>
-          <div className="flex justify-between border border-gray-800 p-6">
+          <div className="flex justify-between border border-gray-800 px-2 py-4 sm:p-8 ">
             <a href="https://github.com/paul-lorenc" aria-label="Github">
               <GithubIcon />
             </a>
@@ -103,7 +104,7 @@ export default function Links(props: Props) {
               <div className="LinkCard ">
                 <Monogram
                   styles={
-                    "max-h-16 text-white hover:text-gray-600 fill-current"
+                    "max-h-12 text-white hover:text-gray-600 fill-current"
                   }
                 />
 
@@ -121,6 +122,7 @@ export default function Links(props: Props) {
               }
             })}
           </div>
+          <Footer />
         </div>
       </div>
     </div>

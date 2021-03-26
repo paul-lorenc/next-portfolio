@@ -12,49 +12,23 @@
   --scrollbarWidth: 0px;
   --windowWidth: calc(100vw - var(--scrollbarWidth));
   --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth) * 2);
-  --linkWidth: calc(var(--windowWidth) - var(--gutterWidth) * 2);
-  --layoutWidthMax: 1000px;
   --columnCountMax: 1;
   --heroColumnCount: 1;
-}
-
-@media (min-width: 600px) {
-  .ZRoot {
-    --columnCountMax: 2;
-    --linkWidth: 568px;
-  }
-}
-@media (min-width: 900px) {
-  .ZRoot {
-    --columnCountMax: 4;
-    --heroColumnCount: 2;
-    --h1FontSize: 3rem;
-    --h2FontSize: 2rem;
-  }
-}
-@media (min-width: 1032px) {
-  .ZRoot {
-    --layoutWidth: calc(var(--layoutWidthMax));
-    --gutterWidth: calc(var(--windowWidth) / 2 - var(--layoutWidth) / 2);
-  }
-}
-
-.ZMain--Container {
-  width: var(--windowWidth);
-}
-
-.ZNav--Container {
-  width: var(--layoutWidth);
 }
 
 .WindowWidth {
   width: var(--windowWidth);
 }
 
-.LinkLayout {
-  width: var(--linkWidth);
-  margin: 0 auto;
-  margin-top: 35px;
+.LayoutWidth {
+  width: var(--layoutWidth);
+}
+
+@media (min-width: 600px) {
+  .ZRoot {
+    --columnCountMax: 2;
+    --layoutWidth: 568px;
+  }
 }
 
 .LinkMonogram {
@@ -62,20 +36,9 @@
   place-items: center;
 }
 
-.ZWW {
-  width: var(--windowWidth);
-}
-
 .LinkCard {
   display: grid;
   grid-template-columns: max-content 1fr;
-  place-items: center;
-}
-
-.ZChildren--Container {
-  width: var(--layoutWidth);
-  margin: 0 auto;
-  display: grid;
   place-items: center;
 }
 
