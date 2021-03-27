@@ -13,7 +13,7 @@ const SEO = {
     description,
     images: [
       {
-        url: "https://paul-lorenc.com/banners/home-banner.png",
+        url: "https://paul-lorenc.com/banners/banner.png",
         alt: title,
         width: 1280,
         height: 640,

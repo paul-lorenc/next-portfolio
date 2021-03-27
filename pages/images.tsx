@@ -38,7 +38,7 @@ export default function Images(props: Props) {
           description,
           images: [
             {
-              url: "https://paul-lorenc.com/banners/images-banner.png",
+              url: "https://paul-lorenc.com/banners/banner.png",
               alt: description,
             },
           ],

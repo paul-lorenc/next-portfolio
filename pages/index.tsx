@@ -4,11 +4,6 @@ import { getSortedPosts } from "@/lib/mdx";
 import { getHeaderSlateImages, SlateImage } from "@/lib/slate";
 import { ImageCard } from "@/components/ImageCard";
 import { useScrollbarSize } from "react-scrollbar-size";
-import Link from "next/link";
-import { Monogram } from "@/components/svgs/Monogram";
-import { CodeIcon } from "@/components/svgs/CodeIcon";
-import { ImageIcon } from "@/components/svgs/ImageIcon";
-import { LinkIcon } from "@/components/svgs/LinkIcon";
 
 interface AbstractPost {
   type: string;

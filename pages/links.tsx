@@ -48,7 +48,7 @@ export default function Links(props: Props) {
             description,
             images: [
               {
-                url: "https://paul-lorenc.com/banners/link-banner.png",
+                url: "https://paul-lorenc.com/banners/banner.png",
                 alt: description,
               },
             ],
