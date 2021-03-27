@@ -1,0 +1,25 @@
+---
+title: "Pytorch CNN TyNet"
+date: "May 10, 2020"
+author: "Paul Lorenc et al"
+excerpt: "A CNN developed to harmonize monophonic jazz melodies."
+src: "/icons/pytorch.png"
+---
+
+<Image
+  src="/projects/mtyner.png"
+  width={939}
+  height={939}
+  layout="responsive"
+  alt="McCoy Tyner"
+/>
+
+This blog post offers a high level summary of the project. My collaborators and I worked on a detailed report of our findings which you can read <a href="/static/etc/cis519ProjectReport.pdf">here</a>
+
+TyNet is a project I started with two of my classmates, Jens Honack and Damian Krupa, for a final project for CIS419 at the University of Pennsylvania. Currently we are still adding to it after the class has ended in order to make it more readable, and continue optimizations.
+
+TyNet is a Temporal Convolutional Neural Network. It is designed to take in a monophonic MIDI melody, and output a set of chords to play 'behind' this melody. We set out to accomplish this by training a Pytorch CNN on the Weimar Jazz Dataset . We trained our dataset one song at a time, our input being 2 bars of melody, and the output being 2 bars of chords to accompany the input. The first main problem we ran into was the fact that in each 2 bar segment, there can be a varied amount of information in the melody. The soloist could rapidly have played 50 notes, or could have simply sustained one note the entire time, so we needed to standardize this interval. We solved this problem by sampling at the 32nd note level. This means at the beginning of every 32nd note we would check which MIDI note is being played and record it. This gave us a standardized input to feed to our neural network.
+
+Our input after sampling was a 1x64 vector of integers where each integer represented a MIDI note. One interesting part of our preprocessing step is that we create additional convolutional layers 'by hand'. We added binary layers to the input such that each layer represents a different chord. A given layer is high when the corresponding melody note is in the chord of this layer.
+
+We found that our model was able to accurately figure out the key of the melody being played, and it would mostly play diatonic chords as an accompaniment. An important part of jazz is expanding on diatonic ideas with chord extensions and chromaticism. We hope to make progress towards adding this in future iterations. You can view our current work on Google Collab here

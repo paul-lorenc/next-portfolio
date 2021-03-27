@@ -1,3 +1,47 @@
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ZRoot {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --gutterWidth: 16px;
+  --scrollbarWidth: 0px;
+  --windowWidth: calc(100vw - var(--scrollbarWidth));
+  --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth) * 2);
+  --columnCountMax: 1;
+  --heroColumnCount: 1;
+}
+
+.WindowWidth {
+  width: var(--windowWidth);
+}
+
+.LayoutWidth {
+  width: var(--layoutWidth);
+}
+
+@media (min-width: 600px) {
+  .ZRoot {
+    --columnCountMax: 2;
+    --layoutWidth: 568px;
+  }
+}
+
+.LinkMonogram {
+  display: grid;
+  place-items: center;
+}
+
+.LinkCard {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  place-items: center;
+}
+
 html {
   min-width: 360px;
   scroll-behavior: smooth;
@@ -30,6 +74,11 @@ pre::-webkit-scrollbar {
 pre {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: 1fr max-content max-content max-content;
 }
 
 .sticky-nav {

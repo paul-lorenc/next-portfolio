@@ -3,7 +3,7 @@ export const GithubIcon: React.FC<any> = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 120 120"
-      className="p-0 sm:p-1 max-h-10 sm:max-h-16 text-white hover:text-gray-600 fill-current"
+      className="max-h-10 sm:max-h-16 text-white hover:text-gray-600 fill-current"
       width="64"
     >
       <path
