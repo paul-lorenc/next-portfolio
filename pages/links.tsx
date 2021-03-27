@@ -58,7 +58,7 @@ export default function Links(props: Props) {
           <div className="LinkMonogram">
             <Monogram styles="max-h-24 text-white hover:text-gray-600 fill-current" />
           </div>
-          <div className="flex justify-between border border-gray-800 px-2 py-4 sm:p-8 ">
+          <div className="flex justify-between border border-gray-800 px-2 py-4 sm:px-5 sm:py-8">
             <a href="https://github.com/paul-lorenc" aria-label="Github">
               <GithubIcon />
             </a>
